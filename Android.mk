@@ -53,4 +53,9 @@ LOCAL_REQUIRED_MODULES := android.hardware.keymaster@3.0-service
 LOCAL_SRC_FILES := ../../../$(TARGET_OUT_VENDOR_EXECUTABLES)/hw/android.hardware.keymaster@3.0-service
 include $(BUILD_PREBUILT)
 
+# Hack some props to allow stock ROM flashing
+BOARD_RECOVERY_IMAGE_PREPARE := \
+    sed -i 's/ro.bootimage.build.date.utc=.*/ro.bootimage.build.date.utc=0/' $(TARGET_RECOVERY_ROOT_OUT)/prop.default; \
+    sed -i 's/ro.build.date.utc=.*/ro.build.date.utc=0/' $(TARGET_RECOVERY_ROOT_OUT)/prop.default
+
 endif
