@@ -54,12 +54,6 @@ Clone device tree:
 git clone https://github.com/Huexxx/twrp_device_xiaomi_chiron -b android-13 ./device/xiaomi/chiron
 ```
 
-In order to successfully build in this branch, the following patch(es) will need to be cherry-picked:
-
-- [fscrypt: wip](https://gerrit.twrp.me/c/android_bootable_recovery/+/5405)
-- [fscrypt: move functionality to libvold](https://gerrit.twrp.me/c/android_system_vold/+/5540)
-- [mtp: Allow transfer of files larger than 4G](https://gerrit.twrp.me/c/android_bootable_recovery/+/5689)
-
 Finally execute these:
 
 ```
