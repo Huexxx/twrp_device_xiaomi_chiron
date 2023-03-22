@@ -32,20 +32,26 @@ Decryption works on Android 12.x ROMs
 
 ## Kernel Source
 
-https://github.com/Nanhumly/android_kernel_xiaomi_msm8998/tree/lineage-19.1
+https://github.com/Huexxx/kernel_xiaomi_msm8998/tree/13
 
 ## Compile
 
-First repo init the TWRP 12.1 tree:
+First repo init the TWRP 12.1 tree (shallow clone):
 
 ```shell
-repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 ```
 
 Sync source:
 
 ```shell
-repo sync
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+
+Clone device tree:
+
+```shell
+git clone https://github.com/Huexxx/twrp_device_xiaomi_chiron -b android-13 ./device/xiaomi/chiron
 ```
 
 In order to successfully build in this branch, the following patch(es) will need to be cherry-picked:
