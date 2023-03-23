@@ -57,7 +57,7 @@ git clone https://github.com/Huexxx/twrp_device_xiaomi_chiron -b android-13 ./de
 Finally execute these:
 
 ```
-.build/envsetup.sh
+. build/envsetup.sh
 lunch twrp_chiron-eng
 mka recoveryimage
 ```
