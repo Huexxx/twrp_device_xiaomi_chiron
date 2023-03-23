@@ -39,7 +39,7 @@ https://github.com/Huexxx/kernel_xiaomi_msm8998/tree/13
 First repo init the TWRP 12.1 tree (shallow clone):
 
 ```shell
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo init --depth=1 -u https://github.com/Huexxx/platform_manifest_twrp_aosp.git -b twrp-12.1
 ```
 
 Sync source:
