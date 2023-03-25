@@ -1,16 +1,16 @@
-# device_xiaomi_chiron-twrp
+# twrp_device_xiaomi_chiron
 
-Tree for building OrangeFox for Xiaomi Mi MIX 2
+Tree for building TWRP for Xiaomi Mi MIX 2
 
 The Xiaomi Mi MIX 2 (codenamed "Chiron") is a high-end smartphone from Xiaomi.
 
 It was announced in October 2017. Release date was December 2017.
 
-Forked From:https://github.com/0ranko0P/twrp_device_xiaomi_sagit
+Forked From: https://github.com/0ranko0P/twrp_device_xiaomi_sagit
 
 ## Note
 
-Decryption works on Android 12.x ROMs
+Decryption works on Android 13 ROMs
 
 ## Device specifications
 
@@ -51,7 +51,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 Clone device tree:
 
 ```shell
-git clone https://github.com/Huexxx/twrp_device_xiaomi_chiron -b android-13 ./device/xiaomi/chiron
+git clone https://github.com/Huexxx/twrp_device_xiaomi_chiron -b 13 ./device/xiaomi/chiron
 ```
 
 Finally execute these:
