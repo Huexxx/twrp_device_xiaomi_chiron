@@ -34,6 +34,16 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
     ro.build.date.utc
 
+# Crypto
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.crypto.allow_encrypt_override=true
+	ro.crypto.volume.filenames_mode=aes-256-cts
+	ro.crypto.volume.options=::v1
+
+# ION
+PRODUCT_PACKAGES += \
+    libion.recovery
+
 # keystore2
 PRODUCT_PACKAGES += \
     android.system.keystore2
